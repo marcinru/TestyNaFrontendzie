@@ -26,7 +26,7 @@ export const getPromotionDuration = (
   if (daysDifference > 2)
     return {
       type: PromotionDurationType.days,
-      value: daysDifference,
+      value: Math.round(daysDifference),
     };
 
   const hours = daysDifference * 24;

@@ -55,7 +55,7 @@ const Delivery = (): JSX.Element => {
                 {method.name[language]}
               </label>
             </Name>
-            <Cell>{isNotFreeDelivery ? price : t("free")}</Cell>
+            <Cell data-testid={`${method.type}Price`}>{isNotFreeDelivery ? price : t("free")}</Cell>
           </Row>
         );
       })}

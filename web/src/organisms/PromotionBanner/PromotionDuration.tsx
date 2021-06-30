@@ -42,7 +42,7 @@ const getPromotionDurationInText = (
         value: promotionDuration.value,
       });
     case PromotionDurationType.months:
-      return translate("The promotion runs for about {value} months.", {
+      return translate("The promotion runs for about {{value}} months.", {
         value: promotionDuration.value,
       });
     case PromotionDurationType.finished:
