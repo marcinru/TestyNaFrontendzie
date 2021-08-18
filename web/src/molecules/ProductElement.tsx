@@ -24,7 +24,6 @@ export const ProductElement = ({
 }: ProductElementProps): JSX.Element => {
   const { i18n } = useTranslation();
   const history = useHistory();
-
   const inCart = cart.some((item) => item.id === product._id);
 
   return (

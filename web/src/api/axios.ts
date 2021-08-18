@@ -1,20 +1,23 @@
 import originalAxios, { AxiosRequestConfig } from "axios";
-import appSettings from "../appSettings";
 
 import { EndpointType } from "./endpoints";
-import { mockedAxios } from "../mocks/mockedAxios";
+import { getCurrentUser } from "../authentication/getCurrentUser";
 
-const API_URL = "http://localhost:3030";
+export const API_URL = "http://localhost:3030";
 
-export const axios = (endpoint: EndpointType, config?: AxiosRequestConfig) => {
-  if (appSettings.IS_MOCK) {
-    return mockedAxios(endpoint);
-  }
+export const axios = <T>(
+  endpoint: EndpointType,
+  config?: AxiosRequestConfig,
+) => {
+  const user = getCurrentUser();
 
-  return originalAxios({
+  return originalAxios.request<T>({
     method: endpoint.method,
     baseURL: API_URL,
     url: endpoint.url,
+    headers: {
+      Authorization: `Bearer ${user}`,
+    },
     ...config,
   });
 };

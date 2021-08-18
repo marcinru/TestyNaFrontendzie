@@ -1,11 +1,18 @@
 module.exports = {
-  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
-  testEnvironment: "jsdom",
-  roots: ["<rootDir>/src"],
-  moduleNameMapper: {
-    "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/__mocks__/fileMock.js",
-    "\\.(css|less)$": "<rootDir>/__mocks__/fileMock.js",
-  },
-  moduleDirectories: ["node_modules", "testsUtils"],
-};
+    setupFilesAfterEnv: [
+        '@testing-library/jest-dom/extend-expect',
+        "./src/setupTests.ts"
+    ],
+    testEnvironment: 'jsdom',
+    "roots": [
+        "<rootDir>/src"
+    ],
+    "moduleNameMapper": {
+        "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+        "\\.(css|less)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "moduleDirectories": [
+        'node_modules',
+        'testsUtils'
+    ]
+}

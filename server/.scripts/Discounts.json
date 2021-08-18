@@ -1,0 +1,80 @@
+{
+  "_id": {
+    "$oid": "60dc17a108c673e54762488e"
+  },
+  "name": "Christmas promotion",
+  "description": {
+    "pl": "Świąteczna promocja 25% zniżki na wszystkie produkty!",
+    "en": "Christmas promotion 25% off all products!"
+  },
+  "discount": {
+    "code": "ŚWIĄTECZNA_PROMOCJA",
+    "percentage": 25
+  },
+  "dateStart": "2021-12-10",
+  "dateEnd": "2021-12-31"
+}
+{
+  "_id": {
+    "$oid": "60dc17a108c673e54762488f"
+  },
+  "name": "Year-round promotion",
+  "description": {
+    "pl": "Zamów z kodem rabatowym -10%",
+    "en": "Order with discount code -10%"
+  },
+  "discount": {
+    "code": "ALE_RABAT",
+    "percentage": 10
+  },
+  "dateStart": "2021-01-01",
+  "dateEnd": "2021-12-31"
+}
+{
+  "_id": {
+    "$oid": "60dc17a108c673e547624890"
+  },
+  "name": "Children's Day",
+  "description": {
+    "pl": "Z okazji dnia dziecka mamy dla Ciebie kod rabatowy! Użyj kodu rabatowego i skorzystaj z -45% na wszystkie produkty!",
+    "en": "On the occasion of Children's Day we have a discount code for you! Use the discount code and enjoy -45% on all products!"
+  },
+  "discount": {
+    "code": "DZIEN_DZIECKA_2021",
+    "percentage": 45
+  },
+  "dateStart": "2021-06-01",
+  "dateEnd": "2021-07-25 24:00"
+}
+{
+  "_id": {
+    "$oid": "60dc17a108c673e547624891"
+  },
+  "name": "MAJOWA_PROMOCJA",
+  "description": {
+    "pl": "Majowa wyprzedaż",
+    "en": "May sale"
+  },
+  "discount": {
+    "code": "MAJ_20",
+    "percentage": 20
+  },
+  "dateStart": "2021-05-01",
+  "dateEnd": "2021-06-02 24:00"
+}
+{
+  "_id": {
+    "$oid": "60dc17a108c673e547624892"
+  },
+  "name": "DLA_NAJLEPSZYCH",
+  "description": {
+    "pl": "KOD RABATOWY DLA NAJLEPSZYCH",
+    "en": "DISCOUNT CODE FOR THE BEST PEOPLE"
+  },
+  "discount": {
+    "code": "DLA_NAJLEPSZYCH",
+    "percentage": 13
+  },
+  "dateStart": "2021-06-01",
+  "dateEnd": "2021-09-10 24:00"
+}

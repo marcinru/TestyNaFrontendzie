@@ -9,9 +9,9 @@ import { getDiscountedSum } from "../state/selectors";
 import { shipmentMethods } from "../types/ShipmentMethod";
 import { displayPrice } from "../utils/money";
 import { getCurrentPrice } from "../utils/getCurrentPrice";
-import { useCurrency } from "../currencyContext/CurrencyContext";
 import { useAppSelector } from "../state/store";
 import { chooseShipment } from "../state/delivery";
+import { useCurrency } from "../currencyContext/CurrencyContext";
 
 const DeliveryContainer = styled.section`
   margin-top: 20px;

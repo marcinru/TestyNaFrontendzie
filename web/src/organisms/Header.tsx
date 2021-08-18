@@ -12,7 +12,7 @@ export const Header = (): JSX.Element => {
   return (
     <Container onClick={() => history.push("/cart")}>
       <CartImage src={ShoppingCartImage} />
-      <span data-cy="cartSize">{cart.length}</span>
+      <span data-testId="cartSize">{cart.length}</span>
     </Container>
   );
 };

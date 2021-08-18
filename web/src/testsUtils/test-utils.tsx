@@ -12,10 +12,12 @@ import {
 } from "../currencyContext/CurrencyContext";
 import i18n from "../i18nForTests";
 import { startingState } from "../currencyContext/reducers";
+import { UserContextInterface, UserProvider } from "../userContext/UserContext";
 
 type AllTheProvidersProps = {
   value?: CurrencyContextInterface;
   store?: ReturnType<typeof getTestStore>;
+  user?: UserContextInterface;
 };
 
 export const getTestStore = (preloadedState?: Partial<RootState>) => {
@@ -27,7 +29,7 @@ export const getTestStore = (preloadedState?: Partial<RootState>) => {
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, "queries"> & AllTheProvidersProps
+  options?: Omit<RenderOptions, "queries"> & AllTheProvidersProps,
 ): RenderResult => {
   let value = { state: startingState };
   if (options && options.value) {
@@ -40,7 +42,9 @@ const customRender = (
     return (
       <Provider store={testStore}>
         <CurrencyProvider value={value}>
-          <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
+          <UserProvider value={options?.user}>
+            <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
+          </UserProvider>
         </CurrencyProvider>
       </Provider>
     );

@@ -7,13 +7,13 @@ import hooks from './products.hooks';
 // Add this service to the service type index
 declare module '../../declarations' {
   interface ServiceTypes {
-    'products': Products & ServiceAddons<any>;
+    products: Products & ServiceAddons<any>;
   }
 }
 
 export default function (app: Application): void {
   const options = {
-    paginate: app.get('paginate')
+    paginate: app.get('paginate'),
   };
 
   // Initialize our service with any options it requires
