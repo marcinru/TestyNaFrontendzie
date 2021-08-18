@@ -10,3 +10,10 @@
 
 # production
 /build
+
+
+/cypress/videos/
+/cypress/screenshots/
+
+.env
+

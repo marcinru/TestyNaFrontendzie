@@ -30,6 +30,7 @@ const Discount = (): JSX.Element => {
         .map((discount) => discount.code)
         .includes(formattedCode)
     ) {
+      console.log(formattedCode, availableDiscounts);
       setError("Kod rabatowy jest nieprawidłowy");
     }
     dispatch(addDiscount({ code: formattedCode }));

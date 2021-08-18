@@ -11,8 +11,12 @@ const MainContainer = styled.main`
 
 const Container = ({
   children,
+  className,
 }: {
   children: React.ReactNode;
-}): JSX.Element => <MainContainer>{children}</MainContainer>;
+  className?: string;
+}): JSX.Element => (
+  <MainContainer className={className}>{children}</MainContainer>
+);
 
 export default Container;

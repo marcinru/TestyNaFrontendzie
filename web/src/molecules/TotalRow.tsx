@@ -19,7 +19,7 @@ const TotalRow = (): JSX.Element => {
   return (
     <Summary>
       <Name>{t("To pay")}: </Name>
-      <Cell>{displayPrice(total)}</Cell>
+      <Cell data-testId="totalToPay">{displayPrice(total)}</Cell>
     </Summary>
   );
 };

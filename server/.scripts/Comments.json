@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "60d72f2166ecfcf52f663b90"
+  },
+  "productId": "60d4fc8f9f8556926118fb79",
+  "owner": "Piotr",
+  "comment": "Wybitne buty polecam wszystkim!",
+  "date": "2020-06-26 15:44"
+}
+{
+  "_id": {
+    "$oid": "60d72f4366ecfcf52f663b91"
+  },
+  "productId": "60d4fc8f9f8556926118fb79",
+  "owner": "John",
+  "comment": "These shoes are amazing! I want one more pair!",
+  "date": "2020-05-20 15:44"
+}
+{
+  "_id": {
+    "$oid": "60d72f5d66ecfcf52f663b92"
+  },
+  "productId": "60d4fc8f9f8556926118fb79",
+  "owner": "Sławek",
+  "comment": "Nie polecam - ogólnie to 2 na 10 :/",
+  "date": "2021-06-14 15:45"
+}
+{
+  "_id": {
+    "$oid": "60d72f6f66ecfcf52f663b93"
+  },
+  "productId": "60d4fc8f9f8556926118fb79",
+  "owner": "NIE POLECAM",
+  "comment": "NIE POLECAM",
+  "date": "2021-03-26 15:45"
+}
+{
+  "productId": "60d4fc8f9f8556926118fb7b",
+  "owner": "Ryszard",
+  "comment": "These are the best trekking boots I ever had!",
+  "date": "2021-02-26 18:56"
+}

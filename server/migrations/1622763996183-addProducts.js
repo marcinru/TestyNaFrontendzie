@@ -1,6 +1,6 @@
 'use strict';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const getProducts = require('../mockData/getProducts');
+const getProducts = require('../src/mockData/getProducts');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;

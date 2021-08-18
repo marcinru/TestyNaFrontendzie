@@ -6,6 +6,7 @@ import Address from "./pages/Address";
 import Payment from "./pages/Payment";
 import Summary from "./pages/Summary";
 import { ProductPage } from "./pages/ProductPage";
+import Admin from "./pages/Admin";
 
 export const AppRoutes = () => {
   return (
@@ -13,6 +14,9 @@ export const AppRoutes = () => {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/admin">
+          <Admin />
         </Route>
         <Route path="/cart">
           <Cart />

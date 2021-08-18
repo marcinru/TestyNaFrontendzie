@@ -4,7 +4,7 @@ import { axios } from "../api/axios";
 import { EndpointType } from "../api/endpoints";
 
 export function useAxiosGet<T>(
-  endpoint: EndpointType
+  endpoint: EndpointType,
 ): [T | undefined, boolean, any, Dispatch<SetStateAction<T | undefined>>] {
   const [data, setData] = useState(undefined);
   const [loading, setLoading] = useState(true);

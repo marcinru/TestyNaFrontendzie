@@ -2,9 +2,9 @@ import userEvent from "@testing-library/user-event";
 import { getTestStore, render, screen } from "test-utils";
 import React from "react";
 
-import { addDiscount, CartItem } from "../../../state/cart";
-import { Currency } from "../../../types/Currency";
-import CartList from "../CartList";
+import CartList from "../CartList/CartList";
+import { addDiscount, CartItem } from "../../state/cart";
+import { Currency } from "../../types/Currency";
 
 const product: CartItem = {
   id: "123",
@@ -30,7 +30,7 @@ describe("<CartList/>", () => {
     render(<CartList />, { store });
 
     expect(
-      screen.getByText("Frontend tests - Szkoła testów")
+      screen.getByText("Frontend tests - Szkoła testów"),
     ).toBeInTheDocument();
     expect(screen.getByTestId("summary-price")).toHaveTextContent("150 $");
   });

@@ -28,8 +28,11 @@
     "lint": "eslint src/. test/. --config .eslintrc.json --ext .ts --fix",
     "dev": "ts-node-dev --no-notify src/",
     "start": "npm run compile && node lib/",
-    "jest": "jest  --forceExit",
-    "compile": "shx rm -rf lib/ && tsc"
+    "start:e2e": "npm run startLocalDB && npm start",
+    "jest": "jest",
+    "compile": "shx rm -rf lib/ && tsc",
+    "startLocalDB": "docker stop tnf-mongo 2> /dev/null|| true && docker rm tnf-mongo 2> /dev/null || true && docker run -p 27017:27017 --name tnf-mongo -d mongo && sleep 5 && .scripts/populateLocalMongo.bash",
+    "restartDatabase": ".scripts/populateLocalMongo.bash"
   },
   "standard": {
     "env": [
@@ -49,12 +52,15 @@
     "@feathersjs/transport-commons": "^4.5.11",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "feathers-memory": "^4.1.0",
     "feathers-mongodb": "^6.3.0",
     "helmet": "^4.6.0",
     "migrate": "^1.7.0",
     "mongodb": "^3.6.9",
     "mongodb-core": "^3.2.7",
     "serve-favicon": "^2.5.0",
+    "stripe": "^8.157.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
@@ -70,7 +76,11 @@
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.4",
+    "prettier": "^2.3.2",
     "shx": "^0.3.3",
     "ts-jest": "^27.0.2",
     "ts-node-dev": "^1.1.6",

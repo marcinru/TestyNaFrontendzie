@@ -1,7 +1,16 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ],
   "parserOptions": {
-    "project": "./tsconfig.eslint.json"
+    "project": ["./tsconfig.eslint.json"]
   },
   "extends": [
     "airbnb-typescript",
@@ -20,7 +29,13 @@
       }
     ],
     "import/no-unused-modules": [1, { "unusedExports": true }],
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "trailingComma": "all"
+      }
+    ],
     "import/prefer-default-export": 0,
     "no-underscore-dangle": 0,
     "no-cond-assign": ["error", "except-parens"],
@@ -40,7 +55,12 @@
       { "allowRequiredDefaults": true }
     ],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-uses-react": "off"
+    "react/jsx-uses-react": "off",
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error"
   },
   "env": {
     "node": true,
