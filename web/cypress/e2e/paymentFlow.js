@@ -1,9 +1,11 @@
-describe('Payment flow', () => {
-  it('successfully completes payment with USD', () => {
-    cy.visit('/');
+describe("Payment flow", () => {
+  it("successfully completes payment with USD", () => {
+    cy.visit("/");
+
     cy.contains("Sports shoes - Adidas").parent().find("img").click();
-    cy.findByTestId('cartSize').click();
-    cy.contains("Cart");
+    cy.findByTestId("cartSize").should("have.text", 1);
+    cy.findByTestId("cartSize").click();
+
     cy.contains("Address").click();
 
     cy.findByPlaceholderText("First name").type("John");
@@ -13,13 +15,13 @@ describe('Payment flow', () => {
     cy.findByPlaceholderText("City").type("The North");
     cy.contains("Payment").click();
 
-    cy.fillElementsInput('cardNumber', '4242424242424242');
-    cy.fillElementsInput('cardExpiry', '1025');
-    cy.fillElementsInput('cardCvc', '123');
-    cy.fillElementsInput('postalCode', '90210');
-
-    cy.findByTestId("totalToPay").contains('73.57 $');
+    cy.fillElementsInput("cardNumber", "4242424242424242");
+    cy.fillElementsInput("cardExpiry", "1025");
+    cy.fillElementsInput("cardCvc", "123");
+    cy.fillElementsInput("postalCode", "90210");
+    cy.findByTestId("totalToPay").contains("73.57 $");
     cy.contains("Pay with a card").click();
+
     cy.contains("Payment successfully completed", { timeout: 10000 });
   });
 });

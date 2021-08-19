@@ -20,14 +20,10 @@
     "paths": {
       "test-utils": ["./testsUtils/test-utils"]
     },
-    "types": [
-      "cypress", "@testing-library/cypress", "cypress-plugin-stripe-elements"
-    ]
   },
   "include": [
     "src",
     "./index.d.ts",
     "../server/node_modules/@types/jest/index.d.ts",
-    "cypress"
   ]
 }
