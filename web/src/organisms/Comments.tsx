@@ -19,7 +19,6 @@ const CommentsWrapper = ({ productId }: CommentsWrapperProps): JSX.Element => {
     const fetch = async () => {
       try {
         const data = await getComments(productId);
-        console.log("DATAT: ", data);
         setComments(data as Comment[]);
       } catch (e) {
         setError(true);

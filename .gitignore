@@ -1,3 +1,4 @@
 .migrate
 web/.env
 .idea
+node_modules

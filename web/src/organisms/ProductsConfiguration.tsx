@@ -33,11 +33,11 @@ export const ProductsConfiguration = () => {
   };
 
   return (
-    <div>
+    <div className="products-list">
       <h2>{t("Products")}</h2>
       {products.map((prod: Product) => {
         return (
-          <ProductContainer key={prod._id}>
+          <ProductContainer className="product" key={prod._id}>
             <DetailsContainer>
               <span>
                 {prod.name[language]} - {prod.brand}
